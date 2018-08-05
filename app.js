@@ -24,22 +24,18 @@ const rootRoute   = require('./routes/root'),
       editRoute   = require('./routes/edit'),
       updateRoute = require('./routes/update'),
       deleteRoute = require('./routes/delete');
-
-
+      
+      
 // USING ROUTES
-app.use(rootRoute);
-app.use(indexRoute);
-app.use(newRoute);
-app.use(createRoute);
-app.use(showRoute);
-app.use(editRoute);
-app.use(updateRoute);
-app.use(deleteRoute);
-
-
-// FIX NAVBAR COLLAPSE
-// MAKE BUTTON COLORS/HOVER SAME AS NAVBAR
-// FIX SHOW ROUTE
+app.use(rootRoute,
+      indexRoute,
+      newRoute,
+      createRoute,
+      showRoute,
+      editRoute,
+      updateRoute,
+      deleteRoute);
+      
 
 app.listen(process.env.PORT, process.env.IP, () => {
     console.log('server started');

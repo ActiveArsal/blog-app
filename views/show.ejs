@@ -11,9 +11,9 @@
             <div class='description pb-2'>
                 <p><%- blog.body %></p>
             </div>
-            <a class='ui orange basic button' href='/blogs/<%= blog._id %>/edit'>Edit</a>
+            <a class='ui orange basic button hover' href='/blogs/<%= blog._id %>/edit'><i class='pencil icon'></i>Edit</a>
             <form id='delete' action='/blogs/<%= blog._id %>?_method=DELETE' method='POST'>
-                <button class='ui red basic button'>Delete</button>
+                <button class='ui red basic button hover'><i class='trash alternate icon'></i>Delete</button>
             </form>
         </div>
     </div>
