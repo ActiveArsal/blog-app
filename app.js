@@ -15,17 +15,14 @@ app.use(expressSanitizer());
 app.use(methodOverride("_method"));
 
 
-
-
 // REQUIRING ROUTES
 const rootRoute   = require('./routes/root'),
       indexRoute  = require('./routes/index'),
       newRoute    = require('./routes/new'),
       createRoute = require('./routes/create'),
-      showRoute   = require('./routes/show');
-
-
-
+      showRoute   = require('./routes/show'),
+      editRoute   = require('./routes/edit'),
+      updateRoute = require('./routes/update');
 
 
 app.use(rootRoute);
@@ -33,16 +30,14 @@ app.use(indexRoute);
 app.use(newRoute);
 app.use(createRoute);
 app.use(showRoute);
+app.use(editRoute);
+app.use(updateRoute);
 
 
 
 // FIX NAVBAR COLLAPSE
 // MAKE BUTTON COLORS/HOVER SAME AS NAVBAR
 // FIX SHOW ROUTE
-
-
-
-
 
 app.listen(process.env.PORT, process.env.IP, () => {
     console.log('server started');
