@@ -8,8 +8,8 @@ const expressSanitizer = require('express-sanitizer'),
       
 // APP CONFIGURATION
 // mongodb://arsal:vegeta1@ds213612.mlab.com:13612/arsalblog
-mongoose.connect('mongodb://localhost/blog-app');
-// mongoose.connect('mongodb://arsal:vegeta1@ds213612.mlab.com:13612/arsalblog');
+// mongoose.connect('mongodb://localhost/blog-app');
+mongoose.connect('mongodb://arsal:vegeta1@ds213612.mlab.com:13612/arsalblog');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -37,7 +37,6 @@ app.use(rootRoute,
       editRoute,
       updateRoute,
       deleteRoute);
-      
 
 app.listen(process.env.PORT, process.env.IP, () => {
     console.log('server started');
