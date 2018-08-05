@@ -2,15 +2,16 @@ const express = require('express');
 const router = express.Router();
 const Blog = require('../models/blogs');
 
-// ROOT ROUTE
-router.get('/blogs', (req, res) => {
-    Blog.find({}, (err, blogs) => {
+router.post('/blogs', (req, res) => {
+    req.body.blog.body = req.sanitize(req.body.blog.body);
+    Blog.create(req.body.blog, (err, newBlog) => {
         if(err){
             console.log(err);
         } else {
-            res.render('index', {blogs: blogs})
+            res.redirect('/blogs');
         }
-    });
-});
+    })
+})
+
 
 module.exports = router;

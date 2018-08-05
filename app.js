@@ -16,13 +16,26 @@ app.use(methodOverride("_method"));
 
 
 
+
 // REQUIRING ROUTES
-const rootRoute  = require('./routes/root'),
-      indexRoute = require('./routes/index');
+const rootRoute   = require('./routes/root'),
+      indexRoute  = require('./routes/index'),
+      newRoute    = require('./routes/new'),
+      createRoute = require('./routes/create');
+
+
+
 
 
 app.use(rootRoute);
 app.use(indexRoute);
+app.use(newRoute);
+app.use(createRoute);
+
+
+
+
+
 
 
 
