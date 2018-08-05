@@ -22,9 +22,11 @@ const rootRoute   = require('./routes/root'),
       createRoute = require('./routes/create'),
       showRoute   = require('./routes/show'),
       editRoute   = require('./routes/edit'),
-      updateRoute = require('./routes/update');
+      updateRoute = require('./routes/update'),
+      deleteRoute = require('./routes/delete');
 
 
+// USING ROUTES
 app.use(rootRoute);
 app.use(indexRoute);
 app.use(newRoute);
@@ -32,7 +34,7 @@ app.use(createRoute);
 app.use(showRoute);
 app.use(editRoute);
 app.use(updateRoute);
-
+app.use(deleteRoute);
 
 
 // FIX NAVBAR COLLAPSE
