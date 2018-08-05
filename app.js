@@ -21,7 +21,8 @@ app.use(methodOverride("_method"));
 const rootRoute   = require('./routes/root'),
       indexRoute  = require('./routes/index'),
       newRoute    = require('./routes/new'),
-      createRoute = require('./routes/create');
+      createRoute = require('./routes/create'),
+      showRoute   = require('./routes/show');
 
 
 
@@ -31,9 +32,13 @@ app.use(rootRoute);
 app.use(indexRoute);
 app.use(newRoute);
 app.use(createRoute);
+app.use(showRoute);
 
 
 
+// FIX NAVBAR COLLAPSE
+// MAKE BUTTON COLORS/HOVER SAME AS NAVBAR
+// FIX SHOW ROUTE
 
 
 
