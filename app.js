@@ -41,3 +41,8 @@ app.use(rootRoute,
 app.listen(process.env.PORT, process.env.IP, () => {
     console.log('server started');
 });
+
+// FOR TESTING PURPOSES
+// app.listen(3000, () => {
+//     console.log('server started');
+// });

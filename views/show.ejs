@@ -11,6 +11,7 @@
             <div class='description pb-2'>
                 <p class='mb-2'><%- blog.body %></p>
             </div>
+            <a class='ui teal big basic button hover' href='/blogs/'><i class='arrow left icon'></i>Back</a>
             <a class='ui orange basic button hover' href='/blogs/<%= blog._id %>/edit'><i class='pencil icon'></i>Edit</a>
             <form id='delete' action='/blogs/<%= blog._id %>?_method=DELETE' method='POST'>
                 <button class='ui red basic button hover'><i class='trash alternate icon'></i>Delete</button>
